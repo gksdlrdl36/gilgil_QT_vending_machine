@@ -101,8 +101,11 @@ void Widget::on_pbCoke_clicked()
 
 void Widget::on_pbReset_clicked()
 {
-    int a,b,c,d;
-    int tmp=0;
+    int a {0};
+    int b {0};
+    int c {0};
+    int d {0};
+    int tmp {0};
     a = money/500;
     tmp = money%500;
     b = tmp/100;
