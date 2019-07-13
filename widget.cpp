@@ -101,6 +101,30 @@ void Widget::on_pbCoke_clicked()
 
 void Widget::on_pbReset_clicked()
 {
+    int a,b,c,d;
+    int tmp=0;
+    a = money/500;
+    tmp = money%500;
+    b = tmp/100;
+    tmp = tmp%100;
+    c = tmp/50;
+    tmp = tmp%50;
+    d = tmp/10;
+
+
+    QString str;
+    \
+    str = QString("=============Change============\n\ 500won : %1\n\ 100won : %2\n\ 50won : %3\n\ 10won : %4")
+                  .arg(QString::number(a),
+                       QString::number(b),
+                       QString::number(c),
+                       QString::number(d));
+
+            QMessageBox::information(nullptr,"Change",str);
+
     money=0;
     changeMoney(money);
+
+
+
 }
